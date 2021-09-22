@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.fragment_toolbar.*
 class ToolbarFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
     var seekvalue = 10
 
-    var activityCallback: ToolbarFragment.ToolbarListener? = null
+    var activityCallback: ToolbarListener? = null
 
     interface ToolbarListener {
         fun onButtonClick(position: Int, text: String)
@@ -33,10 +33,18 @@ class ToolbarFragment : Fragment(), SeekBar.OnSeekBarChangeListener {
             editText1.text.toString())
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        seekBar1.setOnSeekBarChangeListener(this)
-        button1.setOnClickListener { v: View -> buttonClicked(v) }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        super.onCreateView(inflater, container, savedInstanceState)
+        val root: View = inflater.inflate(R.layout.fragment_toolbar, container, false)
+        val seekBar = root.findViewById<SeekBar>(R.id.seekBar1)
+        val btn = root.findViewById<Button>(R.id.button1)
+        seekBar.setOnSeekBarChangeListener(this)
+        btn.setOnClickListener { v: View -> buttonClicked(v) }
+        return root
     }
 
     override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
