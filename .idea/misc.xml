@@ -3,9 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/GitHub/mobileapp-tutorial6/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/GitHub/mobileapp-tutorial6/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/GitHub/mobileapp-tutorial6/app/src/main/res/layout/fragment_text.xml" value="0.25" />
-        <entry key="..\:/GitHub/mobileapp-tutorial6/app/src/main/res/layout/fragment_toolbar.xml" value="0.33" />
+        <entry key="..\:/GitHub/mobileapp-tutorial6/app/src/main/res/layout/fragment_toolbar.xml" value="0.22" />
       </map>
     </option>
   </component>
