@@ -1,11 +1,13 @@
 package com.proscawards.tutorial6ongshuohchwen
 
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : FragmentActivity(), ToolbarFragment.ToolbarListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+    
+    override fun onButtonClick(fontsize: Int, text: String) {}
 }
